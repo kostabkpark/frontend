@@ -13,10 +13,10 @@
       let array = new Array(size);
       for(let i = 0; i < array.length; i++ ){
         array[i] = i+1;
-      }
-      let newArray = array.filter(item => item % 2 == 1);
+      }      
       array.forEach(item => console.log(item));
-      console.log(newArray);
+      array.filter(item => item % 2 == 1)
+           .forEach(item => console.log(item));
     } else {
       console.log("배열이 생성되지 않았습니다.");
     }
