@@ -1,0 +1,28 @@
+#favWrapper {
+  background: url(../images/autumn_pick_bg.png) no-repeat fixed;
+  position:absolute;
+  width:2000px;
+  height:1000px;
+}
+
+.fav-text {
+  color:white;
+}
+
+.bg-text {
+  font-size: 9em;
+}
+
+.md-text {
+  font-size: 6em;
+}
+
+.sm-text {
+  font-size: 4em;
+}
+
+#favImg {
+  position:absolute;
+  right:200px;
+  top:100px;
+}
