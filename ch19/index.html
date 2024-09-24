@@ -10,8 +10,8 @@
   <h1 id="heading" style="color:red; background-color: white;">에디오피아 게뎁</h1>
   <div id="container">
     <img id="prod-pic" src="images/coffee-pink.jpg" alt="커피-핑크"
-         onmouseover="headerColorChange()"
-         onmouseout="headerColorUnchange()"
+         onmouseover="headerColorChange(); headerTextChange()"
+         onmouseout="headerColorUnchange(); headerTextUnChange()"
          onclick="smallPicSizeChange()"
          ondblclick="smallPicSizeUnChange()">
     <p id="desc">
@@ -23,9 +23,9 @@
   </div>
 
   <div id="small-pic">
-    <img class="small" src="images/coffee-pink.jpg" alt="커피-핑크">
-    <img class="small" src="images/coffee-blue.jpg" alt="커피-블루">
-    <img class="small" src="images/coffee-gray.jpg" alt="커피-그레이">
+    <img class="small" src="images/coffee-pink.jpg" alt="커피-핑크" onclick="changePic('coffee-pink.jpg')">
+    <img class="small" src="images/coffee-blue.jpg" alt="커피-블루" onclick="changePic('coffee-blue.jpg')">
+    <img class="small" src="images/coffee-gray.jpg" alt="커피-그레이" onclick="changePic('coffee-gray.jpg')">
   </div>
   <script>
     function headerColorChange(){
@@ -56,6 +56,21 @@
       pinkImg.style.width="100px";
       pinkImg.style.height="100px";
     }    
+
+    function headerTextChange(){
+      let header = document.querySelector("#heading");
+      header.innerText = "추천! 오늘의 커피";
+    }
+
+    function headerTextUnChange(){
+      let header = document.querySelector("#heading");
+      header.innerText = "에디오피아 게뎁";
+    }
+
+    function changePic(picName) {
+      let prodPic = document.querySelector("#prod-pic");
+      prodPic.src="images/"+picName;
+    }
   </script>
 </body>
 </html>
