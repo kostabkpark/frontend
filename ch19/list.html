@@ -4,13 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-</head>
-<body>
-  <input id="todo" type="text">
-  <button onclick="addNewList()">리스트 추가하기</button>
-  <button onclick="removeLastList()">마지막 리스트 삭제하기</button>
-  <ul id="parent">
-  </ul>
   <script>
     function addNewList() {
       let todo = document.querySelector("#todo");  
@@ -38,6 +31,26 @@
         parent.removeChild(parent.lastChild);
       }
     }
+  </script>
+</head>
+<body onload="newFnc()">
+  <script>
+    function newFnc() {
+      let ul = document.querySelector("#parent");
+      ul.setAttribute("class", "new");
+    }
+   //newFnc();
+  </script>
+  <img src="" alt="" onload="checkImgSize()">
+  <p></p>
+  <input id="todo" type="text">
+  <button onclick="addNewList()">리스트 추가하기</button>
+  <button onclick="removeLastList()">마지막 리스트 삭제하기</button>
+  <ul id="parent">
+  </ul>
+
+  <script>
+
   </script>
 </body>
 </html>
